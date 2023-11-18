@@ -13,38 +13,41 @@ form.addEventListener("submit", async function (e) {
 
 const displaySearch = (shows) => {
   for (let results of shows) {
-    const card = document.createElement("div");
-    card.id = "card-container";
-    const img = document.createElement("img");
-    img.className = "prevImg";
-    img.src = results.show.image.medium;
-    const desc = document.createElement("div");
-    desc.id = "desc";
-    const showName = document.createElement("h2");
-    showName.id = "showName";
-    showName.innerText = results.show.name;
-    const avgRating = document.createElement("h3");
-    avgRating.id = "avgRating";
-    avgRating.innerText = "Rating Average: " + results.show.rating.average;
-    const status = document.createElement("p");
-    status.id = "status";
-    status.innerText = "Status: " + results.show.status;
-    const avgRun = document.createElement("p");
-    avgRun.id = "avgRun";
-    avgRun.innerText =
-      "Average Runtime: " + results.show.averageRuntime + " minutes";
-    const genre = document.createElement("p");
-    genre.id = "genre";
-    genre.innerText = "Genres: " + results.show.genres;
-
-    main.appendChild(card);
-    card.appendChild(img);
-    desc.appendChild(showName);
-    card.append(desc);
-    desc.appendChild(avgRating);
-    desc.appendChild(status);
-    desc.appendChild(avgRun);
-    desc.appendChild(genre);
+    createCard(results);
   }
 };
-const createCard = () => {};
+
+const createCard = (results) => {
+  const card = document.createElement("div");
+  card.id = "card-container";
+  const img = document.createElement("img");
+  img.className = "prevImg";
+  img.src = results.show.image.medium;
+  const desc = document.createElement("div");
+  desc.id = "desc";
+  const showName = document.createElement("h2");
+  showName.id = "showName";
+  showName.innerText = results.show.name;
+  const avgRating = document.createElement("h3");
+  avgRating.id = "avgRating";
+  avgRating.innerText = "Rating Average: " + results.show.rating.average;
+  const status = document.createElement("p");
+  status.id = "status";
+  status.innerText = "Status: " + results.show.status;
+  const avgRun = document.createElement("p");
+  avgRun.id = "avgRun";
+  avgRun.innerText =
+    "Average Runtime: " + results.show.averageRuntime + " minutes";
+  const genre = document.createElement("p");
+  genre.id = "genre";
+  genre.innerText = "Genres: " + results.show.genres;
+  main.appendChild(card);
+  card.appendChild(img);
+  desc.appendChild(showName);
+  card.appendChild(desc);
+  desc.appendChild(avgRating);
+  desc.appendChild(status);
+  desc.appendChild(avgRun);
+  desc.appendChild(genre);
+  return card;
+};

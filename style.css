@@ -4,6 +4,10 @@
     font-family: poppins;
 }
 
+body {
+    background-color: #241b35;
+}
+
 .navBar {
     display: flex;
     justify-content: center;
