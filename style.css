@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #241b35;
+    color: #ffffff;
+}
+
+#searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    background-color: #241b35;
+}
+
+.searchBar {
+    padding: .25rem;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: #4d425f;
+    color: #ffffff;
+    border-style: none;
+}
+
+.searchButton {
+    height: 2.5rem;
+    width: 5rem;
+    background-color: #6c35de;
+    border-style: none;
+    color: #ffffff;
+    border-radius: 1rem;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #241b35;
+    color: #ffffff;
+    gap: 1rem;
+}
+
+#card-container {
+    background-color: #342a45;
+    width: 40rem;
+    height: 15rem;
+    border-radius: 1rem;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+#showName {
+    height: 3.5rem;
+}
+
+.prevImg {
+    height: 15rem;
+    border-radius: 1rem;
+}
+
+#desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
